@@ -1,10 +1,14 @@
-local number = "4966882047"
+local number = "4966881089"
 
 			if Global.Dancing == true then
 				Global.Dancing = false
 			end
 
 			local aaa = 'rbxassetid://' .. number
+
+			if (not Global.CloneRig) or game.Players.LocalPlayer.Character ~= Global.CloneRig then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
+			end
 
 			local NeededAssets = game:GetObjects(aaa)[1]
 			local TweenService = game:GetService'TweenService'
