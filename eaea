@@ -6,10 +6,6 @@ local number = "4966882047"
 
 			local aaa = 'rbxassetid://' .. number
 
-			if (not Global.CloneRig) or game.Players.LocalPlayer.Character ~= Global.CloneRig then
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua'))()
-			end
-
 			local NeededAssets = game:GetObjects(aaa)[1]
 			local TweenService = game:GetService'TweenService'
 			if game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("Animator") then game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy() end
